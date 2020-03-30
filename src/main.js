@@ -1,8 +1,12 @@
-import Vue from 'vue'
+import Vue from 'vue/dist/vue'
 import App from './App.vue'
 
 Vue.config.productionTip = false
 
+Vue.use(App)
+
 new Vue({
-  render: h => h(App),
+  data: () => ({
+    showAsyncComp: false
+  })
 }).$mount('#app')
