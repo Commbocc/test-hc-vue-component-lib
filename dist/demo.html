@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<title>HcComponentLib demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./HcComponentLib.umd.js"></script>
+
+<link rel="stylesheet" href="./HcComponentLib.css">
+
+
+<div id="app">
+
+  <div is="HelloWorld"></div>
+
+  <button @click="showAsyncComp = true">Show Async Component</button>
+
+  <div is="AsyncComp" v-if="showAsyncComp"></div>
+
+</div>
+
+<script>
+  Vue.use(App)
+
+  new Vue({
+    data: () => ({
+      showAsyncComp: false
+    })
+  }).$mount('#app')
+</script>
